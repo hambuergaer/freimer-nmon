@@ -1,6 +1,6 @@
 {
   "name": "freimer-nmon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Frank Reimer",
   "summary": "This Puppet modules installs and configures IBM Nmon performance analyzer on RHEL 6 / 7.",
   "license": "GPL v. 3+",
