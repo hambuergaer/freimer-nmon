@@ -1,0 +1,17 @@
+{
+  "name": "freimer-nmon",
+  "version": "0.1.0",
+  "author": "Frank Reimer",
+  "summary": "This Puppet modules installs and configures IBM Nmon performance analyzer on RHEL 6 / 7.",
+  "license": "GPL v. 3+",
+  "source": "https://github.com/hambuergaer/freimer-nmon",
+  "project_page": "https://github.com/hambuergaer/freimer-nmon",
+  "issues_url": "https://github.com/hambuergaer/freimer-nmon/issues",
+  "dependencies": [
+    {
+      "name": "yo61-logrotate",
+      "version_range": ">= 1.3.0"
+    }
+  ]
+}
+
