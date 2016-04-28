@@ -44,6 +44,18 @@ case $operatingsystemmajrelease {
        			hasrestart => true,
 			require	   => [ File["/usr/local/bin/start_nmon.sh"], File["/etc/systemd/system/nmon.service"] ]
         		}
+		
+		logrotate::rule { 'nmon':
+        		path            => '/var/log/nmon/*.nmon',
+        		rotate          => 30,
+        		rotate_every    => 'day',
+        		compress        => true,
+        		dateext         => true,
+			missingok	=> true,
+			ifempty		=> false,
+			prerotate	=> '/bin/systemctl stop nmon > /dev/null 2>&1',
+			postrotate	=> '/bin/systemctl start nmon > /dev/null 2>&1'
+        		}
                 }
         '6': {
                 package { $package_rhel6:
