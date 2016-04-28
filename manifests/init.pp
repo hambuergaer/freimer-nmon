@@ -34,7 +34,8 @@ case $operatingsystemmajrelease {
 
 		exec { 'reload_systemd':
 			command	=> '/bin/systemctl daemon-reload',
-			subscribe => File['/etc/systemd/system/nmon.service']
+			subscribe => File['/etc/systemd/system/nmon.service'],
+			refreshonly => true
 			}
 
 		service { 'nmon':
