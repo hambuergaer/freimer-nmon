@@ -1,0 +1,11 @@
+[Unit]
+Description=nmon performance monitor for Linux
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/start_nmon.sh > /dev/null 2>&1
+ExecStop=/bin/pkill nmon
+Restart=always
+
+[Install]
+WantedBy=default.target
